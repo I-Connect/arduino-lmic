@@ -2231,7 +2231,7 @@ void LMIC_setDrTxpow (dr_t dr, s1_t txpow) {
 
 
 void LMIC_shutdown (void) {
-    os_clearCallback(&LMIC.osjob);
+	os_clearCallback(&LMIC.osjob);
     os_radio(RADIO_RST);
     LMIC.opmode |= OP_SHUTDOWN;
 }
